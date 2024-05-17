@@ -2,7 +2,7 @@
 
 # Riddle Me This?!
 
-Welcome to ***Riddler's Game!*** We are so excited that you could be *coerced* into being here.
+Welcome to ***Riddler's Game!*** We are so excited that you could be *coerced* into playing.
 
 While I got you *tied* up, let's play a little game, shall we?
 
@@ -28,7 +28,6 @@ If you can solve all my puzzles in the alotted amount of time you win. But if yo
 * You may of course scourer the internet for answers.
 * A ding sound chime will go off every time you get an answer correct, and a buzzer style sound for incorrect answers. Once three wrong answers have been given a horn will sound off and the screen will go to black or maybe start glitching before returning to the home screen.
 
-** *I am hoping to possibly have a hidden easter egg somewhere as well in either the home page or end page.*
 
 ***MVP:***
 
@@ -79,3 +78,5 @@ If you can solve all my puzzles in the alotted amount of time you win. But if yo
       ** If I can figure out how to do maybe collect their times and let them know how well they did time wise.
 
 **6. End of Game!**
+
+** *I am hoping to possibly have a hidden easter egg somewhere as well in either the home page or end page.*
