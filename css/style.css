@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: space-around; */
+  background-color: #023b00;
+  /* background-image: url('https://i.etsystatic.com/32777778/r/il/4a5e1e/3469331310/il_1080xN.3469331310_g7tx.jpg'); */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1{
+  display: flex;
+  justify-content: center;
+  color: #8fff27;
+}
+
+h2{
+  display: flex;
+  justify-content: center;
+  color: #8fff27;
+}
+
+#home-nav{
+  padding: 0px;
+  margin: 0px;
+  background-color: #8fff27;
+}
+
+ul {
+  list-style-type: none;
+}
+
+p{
+  background-color: #8fff27;
+}
+
+#navigation{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#top-left-corner{
+  max-width: 150px;
+}
+
+#spiel-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 700px;
+  background-color: #8fff27;
+}
+
+#riddler-img-1{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  max-width: 200px;
+}
+
+button{
+  /* display: flex;
+  /* flex-direction: row; */
+  /* align-items: center; */
+  /* justify-content: space-evenly; */
+  color:#8fff27;
+  background-color: #023b00;
+  max-width: 40px;
+}
+
+#bottom-right-corner{
+  max-width: 150px;
+  position: bottom 50px right 100px;
+  transform: scaleY(-1);
+}
+
+#rules-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  background-color: #8fff27;
+}
+
+#ivy-title{
+  color: #ff035b;
+}
+
+#villain-ivy{
+  /* color: #ff03c8; */
+  /* background-color: #142e13; */
+}
