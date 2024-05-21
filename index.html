@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <script defer src="./js/app.js"></script>
+  <title>Riddlers Game</title>
+</head>
+
+<body>
+  <header>
+    <h1>Welcome</h1>
+    <h1>Riddler's Game!</h1>
+    <h2>Riddle Me This?!</h2>
+  </header>
+  <nav id="home-nav">
+    <ul id="navigation">
+      <li>Home</li>
+      <li>RiddleMeThis</li>
+      <li>About Me</li>
+      <li>Contact</li>
+    </ul>
+  </nav>
+  <img id="top-left-corner" src="https://wallpapers.com/images/hd/question-mark-pictures-6a272dcqi5gz9iia.jpg"
+    alt="Glowing question mark">
+  <section class="sectional-1" id="spiel-section">
+    <h3>The Spiel:</h3>
+    <img id="riddler-img-1" src="https://darkknightnews.com/wp-content/uploads/2023/06/BM_OBD_TR_Banner.jpg"
+      alt="Image of the Riddler with his bowler hat on sitting in a big chair holding his cane looking at the camera">
+    <p>Welcome to <strong>Riddler's Game!</strong> We are so excited that you could be coerced into joining us.
+      <br>
+      <br>
+      While I got you tied up, let's play a little game, shall we?
+      <br>
+      <br>
+      If you can solve all my puzzles in the allotted amount of time you win.
+      But if you don't then you lose, and you don't want to find out what happens if you lose!
+
+    </p>
+    <h4>There are 3 levels:</h4>
+    <ul>
+      <ol>Poison Ivy's level: Game is based on botany/ biology, and chemistry.</ol>
+      <ol>Penguins level: Game is based on aviary and fashion.</ol>
+      <ol>My level aka(Riddler's) level: Game based on pop quiz style riddles.</ol>
+    </ul>
+  </section>
+  <img id="bottom-right-corner" src="https://wallpapers.com/images/hd/question-mark-pictures-6a272dcqi5gz9iia.jpg"
+    alt="Glowing question mark">
+  <button id="start-game">Start Game</button>
+  <button id="investigate">Investigate</button>
+  <section class="sectional-2" id="rules-section">
+    <h3>Game rules:</h3>
+    <ul>
+      <ol>1. Each level has a time limit in which to solve the puzzle(s).</ol>
+      <ol>2. Also the entire game itself has a time limit.</ol>
+      <ol>3. Each Puzzle solved leads into the next level, where the timer gains time back in a selected allotment.</ol>
+      <ol>4. As you move forward in the game the levels will increase in difficulty.</ol>
+      <ol>5. At the end of each level you will be given a code (anagram) that will also need to be solved.</ol>
+      <ol>6. After all levels are finished you will give me the solved codes to receive a special commendation.</ol>
+      <ol>7. There will be hints and clues to each game play.</ol>
+      <ol>8. You may of course scour the internet for answers.</ol>
+      <ol>9. A ding sound chime will go off every time you get an answer correct, and a buzzer style sound for incorrect
+        answers.
+        Once three wrong answers have been given a horn will sound off
+        and the screen will go to black or maybe start glitching before returning to the home screen.</ol>
+    </ul>
+  </section>
+
+  <section class="villain-section" id="villain-ivy" hidden>
+    <h2 id="ivy-title">Poison Ivy!</h2>
+    <section id="poison-quizz">
+      <h3 id="poison-ivy-answer">Answer Here</h3>
+      <p id="quizz-question"></p>
+      <ul id="ivy-quizz-selection">
+        <li><input type="checkbox" id="answer1"></li>
+        <li><input type="checkbox" id="answer2"></li>
+        <li><input type="checkbox" id="answer3"></li>
+        <li><input type="checkbox" id="answer4"></li>
+        <li><input type="checkbox" id="answer5"></li>
+      </ul>
+      <button id="quizz-submit">Submit</button>
+    </section>
+    <section id="periodic-table">
+      <p>The periodic Table: 
+        <br>
+        just incase you need it</p>
+      <img src="https://images.pond5.com/stylized-periodic-table-elements-footage-058138226_iconl.jpeg"
+        alt="periodic table of elements">
+    </section>
+  </section>
+  <footer id="riddle-footer"></footer>
+</body>
+
+</html>
