@@ -47,12 +47,12 @@ let nextAnswer = 0;
 
 function answering() {
   levelOneQuestions[nextAnswer].answers.forEach((answer) => {
-    
+
     const answerEle = document.createElement('li');
     answerEle.innerText = answer;
     selectAnswer.appendChild(answerEle);
     console.log(nextAnswer)
-    
+
   });
   nextAnswer = nextAnswer + 1;
 
@@ -61,11 +61,11 @@ function answering() {
 
 startBtnEle.addEventListener('click', () => {
   villainIvyEle.removeAttribute('hidden');
-  villainIvyEle.style.color = '#ff035b';
+  villainIvyEle.style.color = '#ff4183';
   questionnaire();
   answering()
-  villainIvyEle.style.backgroundColor = '#091209';
-  ivyQuestionEle.style.backgroundColor = '#091209'
+  villainIvyEle.style.backgroundColor = '#040f00';
+  ivyQuestionEle.style.backgroundColor = '#040f00'
   plantImageEle.removeAttribute('hidden');
   selectAnswer.removeAttribute('hidden');
 
@@ -82,12 +82,12 @@ nextQuestionButton.addEventListener('click', () => {
 
 
 selectAnswer.addEventListener('click', (e) => {
-  
+
   if (e.target.innerText === '1966') {
     const correctChoice = document.createElement('h4');
     correctChoice.innerText = 'You have chosen correctly!';
     villainIvyEle.appendChild(correctChoice);
-    selectAnswer.innerText = '';    
+    selectAnswer.innerText = '';
     nextQuestionButton.removeAttribute('hidden');
 
 
@@ -96,7 +96,7 @@ selectAnswer.addEventListener('click', (e) => {
     correctChoice.innerText = 'You have chosen correctly!';
     villainIvyEle.appendChild(correctChoice);
     selectAnswer.innerText = '';
-    
+
 
   } else if (e.target.innerText === 'Atropa Belladonna & Drosera Binata') {
     const correctChoice = document.createElement('h4');
@@ -107,7 +107,7 @@ selectAnswer.addEventListener('click', (e) => {
     firstWordEle.removeAttribute('hidden');
     secondWordEle.removeAttribute('hidden');
     selectAnswer.innerText = '';
-   
+
 
 
   } else {
