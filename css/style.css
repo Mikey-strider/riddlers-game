@@ -5,8 +5,6 @@
 body {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  /* justify-content: space-around; */
   background-color: #023b00;
   /* background-image: url('https://i.etsystatic.com/32777778/r/il/4a5e1e/3469331310/il_1080xN.3469331310_g7tx.jpg'); */
   background-size: cover;
@@ -68,10 +66,6 @@ p{
 }
 
 button{
-  /* display: flex;
-  /* flex-direction: row; */
-  /* align-items: center; */
-  /* justify-content: space-evenly; */
   color:#8fff27;
   background-color: #023b00;
   max-width: 10vh;
@@ -98,10 +92,4 @@ button{
 
 #ivy-title{
   color: #ff035b;
-}
-#quizz
-
-#villain-ivy{
-  /* color: #ff03c8; */
-  /* background-color: #142e13; */
 }

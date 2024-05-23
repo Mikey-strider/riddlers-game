@@ -1,5 +1,3 @@
-console.log('app is running');
-
 const navigationEle = document.getElementById('navigation');
 const spielEle = document.getElementById('spiel-section');
 const startBtnEle = document.getElementById('start-game');
@@ -41,7 +39,7 @@ let nextQuestion = 0;
 function questionnaire() {
   ivyQuestionEle.innerText = levelOneQuestions[nextQuestion].questions;
   nextQuestion = nextQuestion + 1;
-}
+};
 
 let nextAnswer = 0;
 
@@ -51,12 +49,10 @@ function answering() {
     const answerEle = document.createElement('li');
     answerEle.innerText = answer;
     selectAnswer.appendChild(answerEle);
-    console.log(nextAnswer)
-    
   });
   nextAnswer = nextAnswer + 1;
 
-}
+};
 
 
 startBtnEle.addEventListener('click', () => {
@@ -114,14 +110,19 @@ selectAnswer.addEventListener('click', (e) => {
     const wrongChoice = document.createElement('h4');
     wrongChoice.innerText = 'You have chosen wrong, better luck next time!';
     villainIvyEle.appendChild(wrongChoice);
+    window.location.reload();
   }
-})
+});
 
 function anagramSolved() {
   if (firstWordEle.value === 'Mikey' && secondWordEle.value === 'Strider') {
-    console.log('you have beaten the game. Here is a thank you from the creator');
+    const anagramSolved = document.createElement('p');
+    anagramSolved.innerText = 'you have beaten the game. Here is a thank you from the creator!  Thank you for playing my game!';
+    villainIvyEle.appendChild(anagramSolved);
   } else {
-    console.log('That is not it. Maybe next time.')
+    const anagramNotSolved = document.createElement('p');
+    anagramNotSolved.innerText = 'That is not it. Maybe next time.';
+    villainIvyEle.appendChild(anagramNotSolved);
   }
 }
 
