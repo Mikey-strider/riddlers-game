@@ -55,6 +55,7 @@ function answering() {
     
   });
   nextAnswer = nextAnswer + 1;
+
 }
 
 
@@ -102,6 +103,7 @@ selectAnswer.addEventListener('click', (e) => {
     correctChoice.innerText = 'You have chosen correctly! merit sky ride';
     villainIvyEle.appendChild(correctChoice);
     submitAnswerEle.removeAttribute('hidden');
+    plantImageEle.removeAttribute('hidden');
     firstWordEle.removeAttribute('hidden');
     secondWordEle.removeAttribute('hidden');
     selectAnswer.innerText = '';
