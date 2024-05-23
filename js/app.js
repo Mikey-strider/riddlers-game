@@ -84,27 +84,22 @@ selectAnswer.addEventListener('click', (e) => {
     selectAnswer.innerText = '';
     nextQuestionButton.style.visibility = 'visible';
 
-
   } else if (e.target.innerText === 'Bauldlaire') {
     const correctChoice = document.createElement('h4');
     correctChoice.innerText = 'You have chosen correctly!';
     villainIvyEle.appendChild(correctChoice);
     selectAnswer.innerText = '';
     nextQuestionButton.style.visibility = 'visible';
-
-
+    plantImageEle.removeAttribute('hidden');
 
   } else if (e.target.innerText === 'Atropa Belladonna & Drosera Binata') {
     const correctChoice = document.createElement('h4');
     correctChoice.innerText = 'You have chosen correctly! merit sky ride';
     villainIvyEle.appendChild(correctChoice);
     submitAnswerEle.removeAttribute('hidden');
-    plantImageEle.removeAttribute('hidden');
     firstWordEle.removeAttribute('hidden');
     secondWordEle.removeAttribute('hidden');
     selectAnswer.innerText = '';
-
-
 
   } else {
     const wrongChoice = document.createElement('h4');
