@@ -45,13 +45,13 @@ let nextAnswer = 0;
 
 function answering() {
   levelOneQuestions[nextAnswer].answers.forEach((answer) => {
-    
+
     const answerEle = document.createElement('li');
     answerEle.innerText = answer;
     selectAnswer.appendChild(answerEle);
   });
+  nextQuestionButton.style.visibility = 'hidden';
   nextAnswer = nextAnswer + 1;
-
 };
 
 
@@ -62,7 +62,6 @@ startBtnEle.addEventListener('click', () => {
   answering()
   villainIvyEle.style.backgroundColor = '#091209';
   ivyQuestionEle.style.backgroundColor = '#091209'
-  plantImageEle.removeAttribute('hidden');
   selectAnswer.removeAttribute('hidden');
 
 });
@@ -72,19 +71,18 @@ startBtnEle.addEventListener('click', () => {
 nextQuestionButton.addEventListener('click', () => {
   questionnaire();
   answering();
-
 });
 
 
 
 selectAnswer.addEventListener('click', (e) => {
-  
+
   if (e.target.innerText === '1966') {
     const correctChoice = document.createElement('h4');
     correctChoice.innerText = 'You have chosen correctly!';
     villainIvyEle.appendChild(correctChoice);
-    selectAnswer.innerText = '';    
-    nextQuestionButton.removeAttribute('hidden');
+    selectAnswer.innerText = '';
+    nextQuestionButton.style.visibility = 'visible';
 
 
   } else if (e.target.innerText === 'Bauldlaire') {
@@ -92,7 +90,9 @@ selectAnswer.addEventListener('click', (e) => {
     correctChoice.innerText = 'You have chosen correctly!';
     villainIvyEle.appendChild(correctChoice);
     selectAnswer.innerText = '';
-    
+    nextQuestionButton.style.visibility = 'visible';
+
+
 
   } else if (e.target.innerText === 'Atropa Belladonna & Drosera Binata') {
     const correctChoice = document.createElement('h4');
@@ -103,7 +103,7 @@ selectAnswer.addEventListener('click', (e) => {
     firstWordEle.removeAttribute('hidden');
     secondWordEle.removeAttribute('hidden');
     selectAnswer.innerText = '';
-   
+
 
 
   } else {
@@ -123,6 +123,7 @@ function anagramSolved() {
     const anagramNotSolved = document.createElement('p');
     anagramNotSolved.innerText = 'That is not it. Maybe next time.';
     villainIvyEle.appendChild(anagramNotSolved);
+    window.location.reload();
   }
 }
 
