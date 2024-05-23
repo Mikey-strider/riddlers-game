@@ -34,26 +34,27 @@ const levelOneQuestions = [
   },
 ];
 
-// const arrowDirection = document.querySelectorAll(".arrows span");
-// arrowDirection.forEach(arrows => {
-//   arrows.addEventListener("click", () => {
-//     currentMonth = arrows.id === "prev" ? currentMonth - 1 : currentMonth + 1;
 
-let nextQuestion = 0;;
+let nextQuestion = 0;
 
 
 function questionnaire() {
   ivyQuestionEle.innerText = levelOneQuestions[nextQuestion].questions;
-
+  nextQuestion = nextQuestion + 1;
 }
 
+let nextAnswer = 0;
 
 function answering() {
-  levelOneQuestions[nextQuestion].answers.forEach((answer) => {
+  levelOneQuestions[nextAnswer].answers.forEach((answer) => {
+    
     const answerEle = document.createElement('li');
     answerEle.innerText = answer;
     selectAnswer.appendChild(answerEle);
+    console.log(nextAnswer)
+    
   });
+  nextAnswer = nextAnswer + 1;
 }
 
 
@@ -61,7 +62,7 @@ startBtnEle.addEventListener('click', () => {
   villainIvyEle.removeAttribute('hidden');
   villainIvyEle.style.color = '#ff035b';
   questionnaire();
-  answering();
+  answering()
   villainIvyEle.style.backgroundColor = '#091209';
   ivyQuestionEle.style.backgroundColor = '#091209'
   plantImageEle.removeAttribute('hidden');
@@ -71,10 +72,11 @@ startBtnEle.addEventListener('click', () => {
 
 
 
-nextQuestionButton.addEventListener('click', (e) => {
-  console.log(nextQuestion);
-  nextQuestion = nextQuestion + 1;
-})
+nextQuestionButton.addEventListener('click', () => {
+  questionnaire();
+  answering();
+
+});
 
 
 
@@ -84,11 +86,15 @@ selectAnswer.addEventListener('click', (e) => {
     const correctChoice = document.createElement('h4');
     correctChoice.innerText = 'You have chosen correctly!';
     villainIvyEle.appendChild(correctChoice);
+    selectAnswer.innerText = '';    
+    nextQuestionButton.removeAttribute('hidden');
+
 
   } else if (e.target.innerText === 'Bauldlaire') {
     const correctChoice = document.createElement('h4');
     correctChoice.innerText = 'You have chosen correctly!';
     villainIvyEle.appendChild(correctChoice);
+    selectAnswer.innerText = '';
     
 
   } else if (e.target.innerText === 'Atropa Belladonna & Drosera Binata') {
@@ -98,6 +104,9 @@ selectAnswer.addEventListener('click', (e) => {
     submitAnswerEle.removeAttribute('hidden');
     firstWordEle.removeAttribute('hidden');
     secondWordEle.removeAttribute('hidden');
+    selectAnswer.innerText = '';
+   
+
 
   } else {
     const wrongChoice = document.createElement('h4');
