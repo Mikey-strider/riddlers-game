@@ -15,6 +15,9 @@ If you can solve all my puzzles in the allotted amount of time you win. But if y
 3. My level aka(Riddler's) level: Game based on pop quiz style riddles.
 
 ***Game Play:***
+![riddler start menu](image.png)
+![alt text](<Riddlers-Game (1).png>)
+
 
 **Rules:**
 
