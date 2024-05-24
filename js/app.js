@@ -1,5 +1,3 @@
-console.log('app is running');
-
 const navigationEle = document.getElementById('navigation');
 const spielEle = document.getElementById('spiel-section');
 const startBtnEle = document.getElementById('start-game');
@@ -41,7 +39,7 @@ let nextQuestion = 0;
 function questionnaire() {
   ivyQuestionEle.innerText = levelOneQuestions[nextQuestion].questions;
   nextQuestion = nextQuestion + 1;
-}
+};
 
 let nextAnswer = 0;
 
@@ -51,22 +49,19 @@ function answering() {
     const answerEle = document.createElement('li');
     answerEle.innerText = answer;
     selectAnswer.appendChild(answerEle);
-    console.log(nextAnswer)
-
   });
+  nextQuestionButton.style.visibility = 'hidden';
   nextAnswer = nextAnswer + 1;
-
-}
+};
 
 
 startBtnEle.addEventListener('click', () => {
   villainIvyEle.removeAttribute('hidden');
-  villainIvyEle.style.color = '#ff4183';
+  villainIvyEle.style.color = '#ff035b';
   questionnaire();
   answering()
-  villainIvyEle.style.backgroundColor = '#040f00';
-  ivyQuestionEle.style.backgroundColor = '#040f00'
-  plantImageEle.removeAttribute('hidden');
+  villainIvyEle.style.backgroundColor = '#091209';
+  ivyQuestionEle.style.backgroundColor = '#091209'
   selectAnswer.removeAttribute('hidden');
 
 });
@@ -76,7 +71,6 @@ startBtnEle.addEventListener('click', () => {
 nextQuestionButton.addEventListener('click', () => {
   questionnaire();
   answering();
-
 });
 
 
@@ -88,46 +82,45 @@ selectAnswer.addEventListener('click', (e) => {
     correctChoice.innerText = 'You have chosen correctly!';
     villainIvyEle.appendChild(correctChoice);
     selectAnswer.innerText = '';
-    nextQuestionButton.removeAttribute('hidden');
-
+    nextQuestionButton.style.visibility = 'visible';
 
   } else if (e.target.innerText === 'Bauldlaire') {
     const correctChoice = document.createElement('h4');
     correctChoice.innerText = 'You have chosen correctly!';
     villainIvyEle.appendChild(correctChoice);
     selectAnswer.innerText = '';
-
+    nextQuestionButton.style.visibility = 'visible';
+    plantImageEle.removeAttribute('hidden');
 
   } else if (e.target.innerText === 'Atropa Belladonna & Drosera Binata') {
     const correctChoice = document.createElement('h4');
     correctChoice.innerText = 'You have chosen correctly! merit sky ride';
     villainIvyEle.appendChild(correctChoice);
     submitAnswerEle.removeAttribute('hidden');
-    plantImageEle.removeAttribute('hidden');
     firstWordEle.removeAttribute('hidden');
     secondWordEle.removeAttribute('hidden');
     selectAnswer.innerText = '';
-
-
 
   } else {
     const wrongChoice = document.createElement('h4');
     wrongChoice.innerText = 'You have chosen wrong, better luck next time!';
     villainIvyEle.appendChild(wrongChoice);
+    window.location.reload();
   }
-})
+});
 
 function anagramSolved() {
   if (firstWordEle.value === 'Mikey' && secondWordEle.value === 'Strider') {
-    console.log('you have beaten the game. Here is a thank you from the creator');
+    const anagramSolved = document.createElement('p');
+    anagramSolved.innerText = 'you have beaten the game. Here is a thank you from the creator!  Thank you for playing my game!';
+    villainIvyEle.appendChild(anagramSolved);
   } else {
-    console.log('That is not it. Maybe next time.')
+    const anagramNotSolved = document.createElement('p');
+    anagramNotSolved.innerText = 'That is not it. Maybe next time.';
+    villainIvyEle.appendChild(anagramNotSolved);
+    window.location.reload();
   }
 }
 
 
 submitAnswerEle.addEventListener('click', anagramSolved);
-
-
-
-
