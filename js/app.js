@@ -124,7 +124,3 @@ function anagramSolved() {
 
 
 submitAnswerEle.addEventListener('click', anagramSolved);
-
-
-
-

@@ -5,8 +5,10 @@
 body {
   display: flex;
   flex-direction: column;
-  background-color: #023b00;
-  /* background-image: url('https://i.etsystatic.com/32777778/r/il/4a5e1e/3469331310/il_1080xN.3469331310_g7tx.jpg'); */
+  /* align-items: center; */
+  /* justify-content: space-around; */
+  background-color: #010c00;
+  background-image: url('https://i.etsystatic.com/32777778/r/il/4a5e1e/3469331310/il_1080xN.3469331310_g7tx.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -14,19 +16,25 @@ body {
 h1 {
   display: flex;
   justify-content: center;
-  color: #8fff27;
+  color: #fffb27;
 }
 
 h2 {
   display: flex;
   justify-content: center;
-  color: #8fff27;
+  color: #fffb27;
 }
 
 #home-nav {
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; */
   padding: 0px;
   margin: 0px;
-  background-color: #8fff27;
+  border: 3px solid #fffb27;
+  color: #c9ff27;
+  background-color: #010c00;
 }
 
 ul {
@@ -34,7 +42,7 @@ ul {
 }
 
 p {
-  background-color: #8fff27;
+  background-color: #010c00;
 }
 
 #navigation {
@@ -47,6 +55,8 @@ p {
 
 #top-left-corner {
   max-width: 150px;
+  border: 3px solid #fffb27;
+
 }
 
 #spiel-section {
@@ -55,7 +65,9 @@ p {
   justify-content: center;
   align-items: center;
   max-width: 700px;
-  background-color: #8fff27;
+  color: #c9ff27;
+  border: 5px solid #fffb27;
+  background-color: #010c00;
 }
 
 #riddler-img-1 {
@@ -63,18 +75,28 @@ p {
   align-items: flex-end;
   justify-content: flex-end;
   max-width: 200px;
+  border: 3px solid #fffb27;
+
 }
 
 button {
-  color: #8fff27;
+  /* display: flex;
+  /* flex-direction: row; */
+  /* align-items: center; */
+  /* justify-content: space-evenly; */
+  color: #c9ff27;
   background-color: #023b00;
   max-width: 10vh;
 }
 
 #bottom-right-corner {
+  /* display: flex;
+  align-items: end;
+  justify-content: end; */
   max-width: 150px;
-  position: bottom 50px right 100px;
   transform: scaleY(-1);
+  border: 3px solid #fffb27;
+
 }
 
 #rules-section {
@@ -83,7 +105,9 @@ button {
   justify-content: center;
   align-items: center;
   max-width: 900px;
-  background-color: #8fff27;
+  border: 5px solid #fffb27;
+  color: #c9ff27;
+  background-color: #010c00;
 }
 
 #deadly-son {
@@ -91,5 +115,5 @@ button {
 }
 
 #ivy-title {
-  color: #ff035b;
+  color: #ff4183;
 }
